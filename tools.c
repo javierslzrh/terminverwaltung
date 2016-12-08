@@ -87,6 +87,7 @@ void getText(char *textEingabe, int Maxlen, char **text, int required)
         printf("\n%s", textEingabe);
         fgets(input, Maxlen, stdin);
 
+
         if (required && strlen(input) == 1) {
             printf("Der Text ist erforderlich!!!\n");
             isValid = 0;
@@ -94,8 +95,8 @@ void getText(char *textEingabe, int Maxlen, char **text, int required)
 
     } while (!isValid);
 
-    *text = calloc(strlen(input), sizeof(char));
-    strcpy(input, *text);
+    *text = (char *) calloc(strlen(input), sizeof(char));
+    strcpy(*text, input);
     free(input);
 }
 

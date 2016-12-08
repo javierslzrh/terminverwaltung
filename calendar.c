@@ -26,9 +26,9 @@ void createAppointment()
         printf("\nErfassung eines neuen Termins\n");
         printLine('=', 29);
 
-        getDate("\n\nDatum: ", &appointment.datum);
+        //getDate("\n\nDatum: ", &appointment.datum);
         //getTime("\nUhrzeit: ", &appointment.zeit);
-        //getText("\nBeschreibung: ", 100, &appointment.Desciption, 1);&(Calendar[countAppointments].datum)
+        getText("\nBeschreibung: ", 100, &appointment.Description, 1);
         //getText("\nOrt: ", 15, &appointment.Place, 0);
 
         //appointment.Duration = (TTime *) malloc(sizeof(TTime));
@@ -78,8 +78,9 @@ void listCalendar(TAppointment *appointment)
         //printf("%d.%d.%d\n", appointment->datum.Day, appointment->datum.Month, appointment->datum.Year);
         //printLine('_', strlen(printDate()));
 
-        printDate(appointment->datum);
+        //printDate(appointment->datum);
         //printTime(*appointment.Duration);
+        printf("| %s\t", appointment->Description);
 
     /* printf("%s\t\t", appointment->Place );
      printf("| %s\t", appointment->Desciption);  */
